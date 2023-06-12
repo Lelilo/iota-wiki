@@ -5,6 +5,7 @@ import Logo from '@theme/Logo';
 import CollapseButton from '@theme/DocSidebar/Desktop/CollapseButton';
 import Content from '@theme/DocSidebar/Desktop/Content';
 import type {Props} from '@theme/DocSidebar/Desktop';
+import SidebarMenu from '@site/src/common/components/SidebarMenu';
 
 import styles from './styles.module.css';
 
@@ -24,6 +25,7 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}: Props) {
         isHidden && styles.sidebarHidden,
       )}>
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
+      <SidebarMenu />
       <Content path={path} sidebar={sidebar} />
       {hideable && <CollapseButton onClick={onCollapse} />}
     </div>
