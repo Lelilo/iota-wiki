@@ -18,7 +18,19 @@ export type Section = { docId: string } & (
 const SECTIONS: Section[] = [
   {
     name: 'Hornet',
-    docId: 'build-hornet',
+    docId: 'build-hornet-next',
+    icon: Hornet,
+    section: 'layer-1',
+  },
+  {
+    name: 'Hornet 1.0.0',
+    docId: 'build-hornet-1-0-0',
+    icon: Hornet,
+    section: 'layer-1',
+  },
+  {
+    name: 'Hornet 2.0.0-rc.1',
+    docId: 'build-hornet-2-0-0-rc-1',
     icon: Hornet,
     section: 'layer-1',
   },

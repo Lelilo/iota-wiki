@@ -258,10 +258,43 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'build-hornet',
+        id: 'build-hornet-next',
         path: path.resolve(__dirname, './build/hornet/docs'),
-        routeBasePath: 'build/hornet',
+        routeBasePath: 'build/hornet/next',
         sidebarPath: require.resolve('./build/hornet/sidebars.js'),
+        versions: {
+          current: {
+            label: 'Next',
+          },
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'build-hornet-1-0-0',
+        path: path.resolve(__dirname, './build/hornet/docs-1.0.0'),
+        routeBasePath: 'build/hornet/1.0.0',
+        sidebarPath: require.resolve('./build/hornet/sidebars-1.0.0.js'),
+        versions: {
+          current: {
+            label: '1.0.0',
+          },
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'build-hornet-2-0-0-rc-1',
+        path: path.resolve(__dirname, './build/hornet/docs-2.0.0-rc.1'),
+        routeBasePath: 'build/hornet/2.0.0-rc.1',
+        sidebarPath: require.resolve('./build/hornet/sidebars-2.0.0-rc.1.js'),
+        versions: {
+          current: {
+            label: '2.0.0-rc.1',
+          },
+        },
       },
     ],
     [
