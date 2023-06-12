@@ -54,24 +54,14 @@ module.exports = {
             '^(/[^/]+)?/tips*',
         },
         {
+          label: 'Build',
+          to: '/build/hornet/introduction',
+          activeBaseRegex: '^(/[^/]+)?/build/.*'
+        },
+        {
           label: 'Community',
           to: '/community/the-community/discord',
           activeBaseRegex: '^(/[^/]+)?/community/.*',
-        },
-        {
-          type: 'custom-network-dropdown',
-          position: 'right',
-          label: 'Next',
-          items: [
-            {
-              label: 'IOTA',
-              routeBasePath: '/',
-            },
-            {
-              label: 'Shimmer',
-              routeBasePath: '/shimmer/',
-            },
-          ],
         },
       ],
     },
@@ -263,6 +253,24 @@ module.exports = {
             },
           },
         },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'build-hornet',
+        path: path.resolve(__dirname, './build/hornet/docs'),
+        routeBasePath: 'build/hornet',
+        sidebarPath: require.resolve('./build/hornet/sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'build-wasp',
+        path: path.resolve(__dirname, './build/wasp/docs'),
+        routeBasePath: 'build/wasp',
+        sidebarPath: require.resolve('./build/wasp/sidebars.js'),
       },
     ],
   ],
